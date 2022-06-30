@@ -20,7 +20,7 @@ class Pivot
                         endif;
                         $month = intval(date('n', strtotime($data[$i]['tanggal']))) - 1;
                         $result[$category][$s]['menu'] = $menu[$s]['menu'];
-                        $result[$category][$s]['month'][$month] = $data[$i]['total'];
+                        $result[$category][$s]['month'][$month] += $data[$i]['total'];
                     endif;
                 endfor;
             endfor;
